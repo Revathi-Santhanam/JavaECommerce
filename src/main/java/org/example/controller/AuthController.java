@@ -4,7 +4,7 @@ import org.example.controller.implementations.IAuthController;
 import org.example.models.Role;
 import org.example.models.User;
 import org.example.utils.AppException;
-import org.example.utils.StringUtil;
+import org.example.utils.StringUtils;
 import org.example.view.LoginPage;
 import org.example.view.RegisterPage;
 
@@ -37,13 +37,13 @@ public class AuthController implements IAuthController {
         appController.printAuthMenu ( );
         int choice = 0;
         try {
-            choice = enterInt ( StringUtil.ENTER_CHOICE );
+            choice = enterInt ( StringUtils.ENTER_CHOICE );
             if (choice == 1) {
                 login ( );
             } else if (choice == 2) {
                 register ( );
             } else {
-                invalidChoice ( new AppException ( StringUtil.INVALID_CHOICE ) );
+                invalidChoice ( new AppException ( StringUtils.INVALID_CHOICE ) );
 
             }
 
@@ -55,23 +55,28 @@ public class AuthController implements IAuthController {
     @Override
     public void login ( ) {
         String email, password;
-        email = enterString ( StringUtil.ENTER_EMAIL );
-        password = enterString ( StringUtil.ENTER_PASSWORD );
+        email = enterString ( StringUtils.ENTER_EMAIL );
+        password = enterString ( StringUtils.ENTER_PASSWORD );
         User user = validateUser ( email, password );
         if (user != null) {
+            setLoggedInUser(user);
             homeController.printMenu ( );
         } else {
             loginPage.printInvalidCredentials ( );
             authMenu ( );
         }
     }
+
+    private void setLoggedInUser (User user) {
+    }
+
     @Override
     public void register ( ) {
         String name, email, password, confirmPassword;
-        name = enterString ( StringUtil.ENTER_NAME );
-        email = enterString ( StringUtil.ENTER_EMAIL );
-        password = enterString ( StringUtil.ENTER_PASSWORD );
-        confirmPassword = enterString ( StringUtil.ENTER_PASSWORD_AGAIN );
+        name = enterString ( StringUtils.ENTER_NAME );
+        email = enterString ( StringUtils.ENTER_EMAIL );
+        password = enterString ( StringUtils.ENTER_PASSWORD );
+        confirmPassword = enterString ( StringUtils.ENTER_PASSWORD_AGAIN );
         if (password.equals ( confirmPassword )) {
             try {
                 FileWriter fileWriter = new FileWriter ( getCredentialsFile ( ), true );

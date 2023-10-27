@@ -1,6 +1,6 @@
 package org.example.view;
 
-import org.example.utils.StringUtil;
+import org.example.utils.StringUtils;
 
 import static org.example.utils.Utils.println;
 
@@ -9,7 +9,7 @@ public class RegisterPage {
         try {
 
             println("#---------------------#");
-            println( StringUtil.REGISTRATION_SUCCESSFUL );
+            println( StringUtils.REGISTRATION_SUCCESSFUL );
             println("#---------------------#");
             Thread.sleep(1000);
         } catch (InterruptedException e) {
@@ -20,7 +20,7 @@ public class RegisterPage {
     public void passwordMisMatch ( ) {
         try {
             println("#---------------------#");
-            println(StringUtil.PASSWORD_MISMATCH);
+            println( StringUtils.PASSWORD_MISMATCH);
             println("#---------------------#");
             Thread.sleep(1000);
         } catch (InterruptedException e) {

@@ -1,6 +1,6 @@
 package org.example.utils;
 
-public class StringUtil {
+public class StringUtils {
     public static final String WELCOME_MESSAGE = "------Welcome to Java Shopping------";
     public static final String AUTH_MENU = "1. Login\n2. Register";
     public static final String ENTER_CHOICE = "Please enter your choice: ";

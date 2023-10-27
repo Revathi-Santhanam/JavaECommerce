@@ -1,11 +1,7 @@
 package org.example.controller;
 
 import org.example.controller.implementations.IAppController;
-import org.example.utils.StringUtil;
-import org.example.utils.Utils;
 import org.example.view.WelcomePage;
-
-import static org.example.utils.Utils.println;
 
 
 public class AppController implements IAppController {

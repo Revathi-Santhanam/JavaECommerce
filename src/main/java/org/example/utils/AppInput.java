@@ -1,7 +1,5 @@
 package org.example.utils;
 
-import java.util.InputMismatchException;
-
 import static org.example.utils.AppScanner.getScanner;
 import static org.example.utils.Utils.print;
 
@@ -12,7 +10,7 @@ public class AppInput {
         try {
             input = Integer.parseInt ( getScanner ().nextLine () );
         } catch (Exception e) {
-            throw new AppException ( StringUtil.INVALID_CHOICE);
+            throw new AppException ( StringUtils.INVALID_CHOICE);
         }
         return input;
     }
