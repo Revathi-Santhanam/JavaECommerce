@@ -9,7 +9,7 @@ public class AppController implements IAppController {
     private final AuthController authController;
     public AppController(){
         welcomePage=new WelcomePage ();
-        authController=new AuthController (this );
+        authController=new AuthController ();
     }
     @Override
     public void init ( ) {
@@ -17,10 +17,7 @@ public class AppController implements IAppController {
        authController.authMenu ();
     }
 
-    @Override
-    public void printAuthMenu ( ) {
-      welcomePage.printAuthMenu();
-    }
+
 
 
 }

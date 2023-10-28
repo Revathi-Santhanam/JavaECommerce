@@ -5,7 +5,12 @@ import java.sql.Timestamp;
 public class Category {
 
     private int id;
-    private String CategoryName;
+    private String categoryName;
+
+    public Category(int id, String categoryName) {
+        this.id = id;
+        this.categoryName = categoryName;
+    }
 
     public int getId ( ) {
         return id;
@@ -16,10 +21,10 @@ public class Category {
     }
 
     public String getCategoryName ( ) {
-        return CategoryName;
+        return categoryName;
     }
 
     public void setCategoryName (String categoryName) {
-        CategoryName = categoryName;
+        this.categoryName = categoryName;
     }
 }
