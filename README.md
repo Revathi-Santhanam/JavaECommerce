@@ -137,7 +137,10 @@ Working
  Step-4:Admin can view all user details.
  Step-5:Admin can view orders of the users.
 
-       
+##SCREENSHOTS:
+--------------
+LOGIN PAGE
+<img src="src/main/java/org/example/screenshots/Screenshot 2023-10-30 153847.png">
 
 
 

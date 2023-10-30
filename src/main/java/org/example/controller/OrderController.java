@@ -41,7 +41,7 @@ public class OrderController implements IOrderController {
         User loggedInUser = getLoggedInUser ( );
         addOrderToFile();
         try {
-            FileWriter fileWriter = new FileWriter ( "invoice "+getFilePath ( ) + loggedInUser.getId ( ) + "-" + System.currentTimeMillis ( ) + ".txt" );
+            FileWriter fileWriter = new FileWriter ( getFilePath ( ) + loggedInUser.getId ( ) + "-" + System.currentTimeMillis ( ) + ".txt" );
             fileWriter.write ( "Your Order are:" );
             fileWriter.write ( "\n" );
 

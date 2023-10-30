@@ -55,7 +55,7 @@ public class CartPage {
         while ((line = br.readLine ( )) != null) {
             if (!line.startsWith ( loggedInUser.getName () )) {
                 String[] cartArray = line.split ( "," );
-                print(cartArray[2] );
+
             }
         }
 
