@@ -139,8 +139,20 @@ Working
 
 ##SCREENSHOTS:
 --------------
-LOGIN PAGE
+LOGIN PAGE:
 <img src="src/main/java/org/example/screenshots/Screenshot 2023-10-30 153847.png">
+
+HOME MENU:
+<img src="src/main/java/org/example/screenshots/homeMenu.png">
+
+CATEGORY MENU:
+<img src="src/main/java/org/example/screenshots/CategoryMenu.png">
+
+PRODUCTS BASED ON CATRGORY:
+<img src="src/main/java/org/example/screenshots/productsbasedoncategory.png">
+
+CARTPAGE:
+<img src="src/main/java/org/example/screenshots/cartpage.png">
 
 
 
