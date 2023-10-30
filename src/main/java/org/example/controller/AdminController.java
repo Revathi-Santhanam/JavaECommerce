@@ -90,7 +90,7 @@ public class AdminController implements IAdminController {
         } catch (IOException e) {
             throw new RuntimeException ( e );
         }
-        println ( "editted" );
+        println ( "----------------Edited Successfully-------------------" );
     }
 
     @Override
