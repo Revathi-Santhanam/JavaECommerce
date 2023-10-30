@@ -136,9 +136,13 @@ Working
  2.Working of admin side:
  ------------------------
  Step-1:Admin has to login into the application to perform any operation.
+
  Step-2:Admin can view all categories and can perform CRUD operations .
+
  Step-3:Admin can view all products and can perform CRUD operations .
+
  Step-4:Admin can view all user details.
+
  Step-5:Admin can view orders of the users.
 
 ##SCREENSHOTS:
