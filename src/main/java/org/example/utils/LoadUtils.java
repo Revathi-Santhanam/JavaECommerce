@@ -49,8 +49,6 @@ public class LoadUtils {
 
     public static ArrayList<Product> getProducts ( ) throws IOException {
         products.clear ();
-        Category womenFashionCategory = null;
-        Category menFashionCategory;
         String line = "";
         BufferedReader br = new BufferedReader ( new FileReader ( getProductsFile ( ) ) );
         while ((line = br.readLine ( )) != null) {
@@ -60,11 +58,11 @@ public class LoadUtils {
 //                      Product product=new Product ( Integer.parseInt ( productsArray[0] ),productsArray[1],productsArray[2],Double.parseDouble ( productsArray[3] ),Integer.parseInt ( productsArray[4] ),new Category ( Integer.parseInt ( productsArray[6] ),productsArray[5] ) );
 //                      products.add ( product );
                 if (productsArray[6] == "1") {
-                    womenFashionCategory = new Category ( Integer.parseInt ( productsArray[6] ), productsArray[5] );
+                    Category womenFashionCategory = new Category ( Integer.parseInt ( productsArray[6] ), productsArray[5] );
                     Product womenFashionProduct = new Product ( Integer.parseInt ( productsArray[0] ), productsArray[1], productsArray[2], Double.parseDouble ( productsArray[3] ), Integer.parseInt ( productsArray[4] ), womenFashionCategory );
                     products.add ( womenFashionProduct );
                 } else if (productsArray[6] == "2") {
-                    menFashionCategory = new Category ( Integer.parseInt ( productsArray[6] ), productsArray[5] );
+                    Category menFashionCategory = new Category ( Integer.parseInt ( productsArray[6] ), productsArray[5] );
                     Product menFashionProduct = new Product ( Integer.parseInt ( productsArray[0] ), productsArray[1], productsArray[2], Double.parseDouble ( productsArray[3] ), Integer.parseInt ( productsArray[4] ), menFashionCategory );
                     products.add ( menFashionProduct );
                 } else if (productsArray[6] == "3") {
@@ -82,9 +80,6 @@ public class LoadUtils {
                 }
             }
         }
-//
-
-
         return products;
     }
 

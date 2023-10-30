@@ -14,6 +14,16 @@ public class AppInput {
         }
         return input;
     }
+    public static double enterDouble (String msg) throws AppException {
+        print ( msg );
+        double input = 0;
+        try {
+            input =  Double.parseDouble ( getScanner ().nextLine () );
+        } catch (Exception e) {
+            throw new AppException ( StringUtils.INVALID_CHOICE);
+        }
+        return input;
+    }
 
     public static String enterString (String msg) {
         print ( msg );

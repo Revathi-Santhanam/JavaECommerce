@@ -2,7 +2,7 @@ package org.example.utils;
 
 public class StringUtils {
     public static final String WELCOME_MESSAGE = "------Welcome to Java Shopping------";
-    public static final String AUTH_MENU = "1. Login\n2. Register";
+    public static final String AUTH_MENU = "1. Login\t2. Register\t\t99. Exit";
     public static final String ENTER_CHOICE = "Please enter your choice: ";
     public static final String INVALID_CHOICE = "Invalid choice!!! Please enter a valid choice";
     public static final String ENTER_EMAIL = "Please enter your email: ";
@@ -25,4 +25,23 @@ public class StringUtils {
     public static final String THANK_YOU = "Thank you!!!";
     public static final String PLACE_ORDER = "Your order has been placed!!!";
     public static final String ORDERS ="Orders" ;
+    public static final String WELCOME_ADMIN_MESSAGE = "-------Welcome Admin------";
+    public static final String ADMIN_MENU = "0.Category\n1. View Products\n2. Add Products\n3. Delete Products\n4. Edit Products\n5. View User Details\n6. View user Orders\n00. Back";
+    public static final String ENTER_PRODUCT_TITLE = "Enter the product title:";
+    public static final String ENTER_DESCRIPTION = "Enter product description:";
+    public static final String ENTER_CATEGORY = "Enter category of the product:";
+    public static final String ENTER_CATEGORY_ID ="Enter category Id of the product:" ;
+    public static final String ENTER_STOCK = "Enter stocks of the product:";
+    public static final String ENTER_PRICE = "Enter price of the product:";
+    public static final String PRODUCT_ADDED = "-------Product added successfully-------";
+    public static final String ENTER_PRODYCT_ID = "Enter product ID:";
+    public static final String ID_TO_DELETE = "Enter the id to delete the product:";
+    public static final String PRODUCT_DELETED = "-------Product Deleted successfully-------";
+    public static final String ID_TO_EDIT = "Enter the id to edit the product:";
+    public static final String PRODUCT_EDIT = "Enter the edited product name:";
+    public static final String PRODUCT_DESC = "Enter product description to edit:";
+    public static final String EDIT_PRICE = "Edit the price:";
+    public static final String EDIT_STOCKS = "Edit stocks details:";
+    public static final String EDIT_CATEGORY_NAME = "Edit category name:";
+    public static final String EDIT_CATEGORY_ID = "EDIT category Id:";
 }

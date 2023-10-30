@@ -20,7 +20,9 @@ import java.util.Objects;
 
 import static org.example.utils.AppInput.enterInt;
 import static org.example.utils.FileUtil.getFilePath;
+import static org.example.utils.FileUtil.getOrderFile;
 import static org.example.utils.UserUtils.getLoggedInUser;
+import static org.example.utils.UserUtils.loggedInUser;
 import static org.example.utils.Utils.println;
 
 public class OrderController implements IOrderController {
@@ -30,15 +32,16 @@ public class OrderController implements IOrderController {
     public OrderController (HomeController homeController) {
         this.homeController = homeController;
         ordersPage = new OrdersPage ( );
+
     }
 
 
     @Override
     public void checkout ( ) {
         User loggedInUser = getLoggedInUser ( );
-
+        addOrderToFile();
         try {
-            FileWriter fileWriter = new FileWriter ( getFilePath ( ) + loggedInUser.getId ( ) + "-" + System.currentTimeMillis ( ) + ".txt" );
+            FileWriter fileWriter = new FileWriter ( "invoice "+getFilePath ( ) + loggedInUser.getId ( ) + "-" + System.currentTimeMillis ( ) + ".txt" );
             fileWriter.write ( "Your Order are:" );
             fileWriter.write ( "\n" );
 
@@ -55,9 +58,32 @@ public class OrderController implements IOrderController {
         }
 
         getLoggedInUser ( ).setUserCart ( null );
+        removeCartProductfromFile();
         ordersPage.printSuccess ( );
         homeController.printHomeMenu ( );
 
+    }
+    private void removeCartProductfromFile ( ) {
+
+    }
+
+    private void addOrderToFile(){
+        try {
+            FileWriter fileWriter = new FileWriter (getOrderFile ());
+            fileWriter.write ( loggedInUser.getName ()+","+loggedInUser.getEmail ());
+            fileWriter.write ( "\n" );
+
+            double total = 0;
+            for (CartProduct cartProduct : loggedInUser.getUserCart ( ).getCartProducts ( )) {
+                total += cartProduct.getCount ( ) * cartProduct.getProduct ( ).getPrice ( );
+                fileWriter.write ( cartProduct.getProduct ( ).getTitle ( ) + " x " + cartProduct.getCount ( ) + " = Rs. " + cartProduct.getProduct ( ).getPrice ( ) * cartProduct.getCount ( ) );
+                fileWriter.write ( "\n" );
+            }
+            fileWriter.write ( "Total - Rs. " + total );
+            fileWriter.close ( );
+        } catch (IOException e) {
+            e.printStackTrace ( );
+        }
     }
 
 

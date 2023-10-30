@@ -26,12 +26,14 @@ public class AuthController implements IAuthController {
     private final AuthPage authPage;
     private final LoginPage loginPage;
     private final RegisterPage registerPage;
+    private final AdminController adminController;
 
     public AuthController () {
         authPage=new AuthPage ();
         homeController = new HomeController ( this);
         loginPage = new LoginPage ( );
         registerPage = new RegisterPage ( );
+        adminController=new AdminController ();
     }
 
     @Override
@@ -67,8 +69,12 @@ public class AuthController implements IAuthController {
         password = enterString ( StringUtils.ENTER_PASSWORD );
         User user = validateUser ( email, password );
         if (user != null) {
-            setLoggedInUser(user);
-            homeController.printHomeMenu ( );
+            if(user.getRole ()==Role.USER){
+                setLoggedInUser(user);
+                homeController.printHomeMenu ( );
+            }else {
+                adminController.printAdminMenu();
+            }
         } else {
             loginPage.printInvalidCredentials ( );
             authMenu ( );
