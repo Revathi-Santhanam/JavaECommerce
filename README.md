@@ -7,6 +7,10 @@ Text editor used: INTELLIJ .
 
 Project: Maven based project.
 
+## 🛠 Skills
+------------
+Core Java
+
 OverView of the project:
 -----------------------
     Here, user can login or register into the application, shop products they want to add to the cart,while checkout user get an invoice of their orders.
@@ -53,38 +57,38 @@ OverView of the project:
    
 
 ## PROJECT IN MVC MODEL
- Models:                  
-  - Admin
-  - User
-  - Cart
-  - Cartproduct
-  - Order
-  - Product
-  - Category
+📋Models:                  
+  - ➡️Admin
+  - ➡️User
+  - ➡️Cart
+  - ➡️Cartproduct
+  - ➡️Order
+  - ➡️Product
+  - ➡️Category
 
-View:
-  - Admin page
-  - Auth page
-  - Cart page
-  - Login page
-  - Register page
-  - Home page
-  - Category page
-  - Orders page
+📋View:
+  - ➡️Admin page
+  - ➡️Auth page
+  - ➡️Cart page
+  - ➡️Login page
+  - ➡️Register page
+  - ➡️Home page
+  - ➡️Category page
+  - ➡️Orders page
 
-Controller:
-  - Admin Controller
-  - Auth Controller
-  - Home Controller
-  - Cart Controller
-  - Order Controller
-  - Category Controller
-  - Product Controller
+📋Controller:
+  - ➡️Admin Controller
+  - ➡️Auth Controller
+  - ➡️Home Controller
+  - ➡️Cart Controller
+  - ➡️Order Controller
+  - ➡️Category Controller
+  - ➡️Product Controller
 
 
 ## FEATURES OF THE PROJECT
 
-1.USER SIDE:
+1.📋USER SIDE:
    - Login
    - Register
    - View Categories
@@ -95,7 +99,7 @@ Controller:
    - Checkout 
    - Generate invoice for order.
 
-2.ADMIN SIDE:
+2.📋ADMIN SIDE:
    - Login
    - Products 
        - Display Products
